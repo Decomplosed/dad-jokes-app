@@ -2,6 +2,16 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 export class JokeList extends Component {
+  async componentDidMount() {
+    let res = await axios.get('https://icanhazdadjoke.com/',
+      {
+        headers: {
+          Accept: 'application/json'
+        }
+      })
+    console.log(res);
+  }
+
   render() {
     return (
       <div>
