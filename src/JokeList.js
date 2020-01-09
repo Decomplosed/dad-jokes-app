@@ -5,7 +5,12 @@ export class JokeList extends Component {
   static defaultProps = {
     numJokesToGet: 10
   }
-  
+
+  constructor(props) {
+    super(props)
+    this.state = { jokes: [] }
+  }
+
   async componentDidMount() {
     let res = await axios.get('https://icanhazdadjoke.com/',
       {
