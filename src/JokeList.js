@@ -19,7 +19,7 @@ export class JokeList extends Component {
       })
       jokes.push(res.data.joke)
     }
-    console.log(jokes)
+    this.setState({ jokes: jokes })
   }
 
   render() {
