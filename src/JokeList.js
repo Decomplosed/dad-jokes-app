@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 export class JokeList extends Component {
+  static defaultProps = {
+    numJokesToGet: 10
+  }
+  
   async componentDidMount() {
     let res = await axios.get('https://icanhazdadjoke.com/',
       {
