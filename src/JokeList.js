@@ -12,13 +12,14 @@ export class JokeList extends Component {
   }
 
   async componentDidMount() {
-    let res = await axios.get('https://icanhazdadjoke.com/',
-      {
-        headers: {
-          Accept: 'application/json'
-        }
+    let jokes = []
+    while (jokes.length < this.props.numJokesToGet) {
+      let res = await axios.get('https://icanhazdadjoke.com/', {
+        headers: { Accept: 'application/json' }
       })
-    console.log(res);
+      jokes.push(res.data.joke)
+    }
+    console.log(jokes)
   }
 
   render() {
