@@ -10,8 +10,9 @@ export class Joke extends Component {
           <span className='Joke-votes'>{this.props.votes}</span>
           <i className="fas fa-arrow-down" onClick={this.props.downvote}></i>
         </div>
-        <div className="Joke-text">
-          {this.props.text}
+        <div className="Joke-text">{this.props.text}</div>
+        <div className="Joke-smiley">
+          <i class="em em-rolling_on_the_floor_laughing" aria-role="presentation" aria-label="ROLLING ON THE FLOOR LAUGHING"></i>
         </div>
       </div>
     )
