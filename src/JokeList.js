@@ -25,7 +25,15 @@ export class JokeList extends Component {
     this.setState({ jokes: jokes })
   }
 
-  handleVote(id, delta) { }
+  handleVote(id, delta) {
+    this.setState(
+      st => ({
+        jokes: st.jokes.map(j =>
+          j.id === id ? { ...j, votes: j.votes + delta } : j
+        )
+      })
+    )
+  }
 
   render() {
     return (
