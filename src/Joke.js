@@ -49,7 +49,7 @@ export class Joke extends Component {
         </div>
         <div className="Joke-text">{this.props.text}</div>
         <div className="Joke-smiley">
-          <i class="em em-rolling_on_the_floor_laughing" aria-role="presentation" aria-label="ROLLING ON THE FLOOR LAUGHING"></i>
+          <i className={this.getEmoji()}></i>
         </div>
       </div>
     )
