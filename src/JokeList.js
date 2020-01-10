@@ -34,7 +34,7 @@ export class JokeList extends Component {
         </div>
         <div className='JokeList-jokes'>
           {this.state.jokes.map(j => (
-            <div>{j.joke} - {j.votes}</div>
+            <Joke votes={j.votes} text={j.text} />
           ))}
         </div>
       </div>
