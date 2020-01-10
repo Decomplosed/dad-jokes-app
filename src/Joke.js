@@ -3,8 +3,12 @@ import React, { Component } from 'react'
 export class Joke extends Component {
   render() {
     return (
-      <div>
-
+      <div className='Joke'>
+        <div className='Joke-buttons'>
+          <i className="fas fa-arrow-up"></i>
+          <span>{this.props.votes}</span>
+          <i className="fas fa-arrow-down"></i>
+        </div>
       </div>
     )
   }
