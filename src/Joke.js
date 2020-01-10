@@ -9,6 +9,9 @@ export class Joke extends Component {
           <span>{this.props.votes}</span>
           <i className="fas fa-arrow-down"></i>
         </div>
+        <div className="Joke-text">
+          {this.props.text}
+        </div>
       </div>
     )
   }
