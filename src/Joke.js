@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Joke.css'
 
 export class Joke extends Component {
   render() {
