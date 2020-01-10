@@ -49,6 +49,8 @@ export class JokeList extends Component {
               key={j.id}
               votes={j.votes}
               text={j.text}
+              upvote={() => this.handleVote(j.id, 1)}
+              downvote={() => this.handleVote(j.id, -1)}
             />
           ))}
         </div>
