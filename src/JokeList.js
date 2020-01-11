@@ -44,6 +44,10 @@ export class JokeList extends Component {
     )
   }
 
+  handleClick() {
+    this.getJokes()
+  }
+
   render() {
     return (
       <div className='JokeList'>
