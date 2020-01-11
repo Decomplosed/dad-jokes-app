@@ -39,6 +39,11 @@
   transition: all 0.3s;
 }
 
+.fa-arrow-up:hover {
+  animation-name: move-up;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+}
 
 @keyframes move-up {
   0%,
