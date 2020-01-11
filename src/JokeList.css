@@ -44,7 +44,31 @@
   overflow: scroll;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
 }
+
 .JokeList-spinner {
   color: #fff;
   text-align: center;
+}
+
+.JokeList-getmore {
+  font-size: 1.2rem;
+  width: 55%;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: 700;
+  word-spacing: 1.4rem;
+  border: none;
+  outline: none;
+  margin: 2rem;
+  cursor: pointer;
+  transition: 0.8s ease;
+  background: linear-gradient(
+    135deg,
+    rgba(179, 229, 252, 1) 0%,
+    rgba(179, 229, 252, 1) 50%,
+    rgba(240, 98, 146, 1) 50%,
+    rgba(240, 98, 146, 1) 100%
+  );
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
 }
