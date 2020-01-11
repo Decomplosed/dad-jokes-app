@@ -50,7 +50,7 @@ export class JokeList extends Component {
   }
 
   handleClick() {
-    this.getJokes()
+    this.setState({ loading: true }, this.getJokes)
   }
 
   render() {
