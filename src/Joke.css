@@ -65,6 +65,18 @@
   color: #f44336;
 }
 
+@keyframes move-down {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(3px);
+  }
+}
+
 .Joke-smiley {
   font-size: 3rem;
   margin-left: auto;
