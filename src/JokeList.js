@@ -11,7 +11,10 @@ export class JokeList extends Component {
 
   constructor(props) {
     super(props)
-    this.state = { jokes: JSON.parse(window.localStorage.getItem('jokes')) || '[]' }
+    this.state = {
+      jokes: JSON.parse(window.localStorage.getItem('jokes') || '[]'),
+      loading: false
+    }
     this.handleClick = this.handleClick.bind(this)
   }
 
