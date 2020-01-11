@@ -29,10 +29,8 @@ export class JokeList extends Component {
     }
     this.setState(st => ({
       jokes: [...st.jokes, ...jokes]
-    }))
-    window.localStorage.setItem(
-      'jokes',
-      JSON.stringify(jokes)
+    }),
+      () => window.localStorage.setItem('jokes', JSON.stringify(this.state.jokes))
     )
   }
 
