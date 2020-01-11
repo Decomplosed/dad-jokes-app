@@ -54,9 +54,17 @@ export class JokeList extends Component {
   }
 
   render() {
+    if (this.state.loading) {
+      return (
+        <div className='spinner'>
+          <i className='far fa-8x fa-laugh fa-spin' />
+          <h1 className='JokeList-title'>Loading...</h1>
+        </div>
+      )
+    }
     return (
       <div className='JokeList'>
-        <div className="JokeList-sidebar">
+        <div className='JokeList-sidebar'>
           <h1 className='JokeList-title'><span>Dad</span> Jokes</h1>
           <img src='https://assets.dryicons.com/uploads/icon/svg/8927/0eb14c71-38f2-433a-bfc8-23d9c99b3647.svg' alt='laughing-emoji' />
           <button className='JokeList-getmore' onClick={this.handleClick}>New Jokes!</button>
