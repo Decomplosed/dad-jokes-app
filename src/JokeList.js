@@ -15,6 +15,7 @@ export class JokeList extends Component {
       jokes: JSON.parse(window.localStorage.getItem('jokes') || '[]'),
       loading: false
     }
+    this.seenJokes = new Set(this.state.jokes.map(j => j.text))
     this.handleClick = this.handleClick.bind(this)
   }
 
