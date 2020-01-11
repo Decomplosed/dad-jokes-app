@@ -31,6 +31,7 @@ export class JokeList extends Component {
       jokes.push({ id: uuid(), text: res.data.joke, votes: 0 })
     }
     this.setState(st => ({
+      loading: false,
       jokes: [...st.jokes, ...jokes]
     }),
       () => window.localStorage.setItem('jokes', JSON.stringify(this.state.jokes))
