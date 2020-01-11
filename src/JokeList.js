@@ -40,7 +40,8 @@ export class JokeList extends Component {
         jokes: st.jokes.map(j =>
           j.id === id ? { ...j, votes: j.votes + delta } : j
         )
-      })
+      }),
+      () => window.localStorage.setItem('jokes', JSON.stringify(this.state.jokes))
     )
   }
 
