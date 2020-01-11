@@ -29,7 +29,13 @@ export class JokeList extends Component {
       let res = await axios.get('https://icanhazdadjoke.com/', {
         headers: { Accept: 'application/json' }
       })
-      jokes.push({ id: uuid(), text: res.data.joke, votes: 0 })
+      let newJoke = res.data.joke
+      if (!this.seenJokes.has(newJoke)) {
+        jokes.push({ id: uuid(), text: newJoke, votes: 0 })
+      } else {
+        console.log('Found duplicate');
+        console.log(newJoke);
+      }
     }
     this.setState(st => ({
       loading: false,
