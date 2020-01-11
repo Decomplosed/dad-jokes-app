@@ -39,6 +39,7 @@
 .JokeList-sidebar img:hover {
   animation-name: shake-slow;
   animation-duration: 5s;
+  animation-timing-function: ease-in-out;
 }
 
 .JokeList-jokes {
