@@ -43,6 +43,7 @@
   animation-name: move-up;
   animation-duration: 0.7s;
   animation-timing-function: ease-out;
+  color: #8bc34a;
 }
 
 @keyframes move-up {
@@ -55,6 +56,13 @@
   75% {
     transform: translateY(-3px);
   }
+}
+
+.fa-arrow-down:hover {
+  animation-name: move-down;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  color: #f44336;
 }
 
 .Joke-smiley {
